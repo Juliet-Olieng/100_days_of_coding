@@ -20,9 +20,6 @@ fun main(args: Array<String>) {
     mainStage.performingOnStage()
     var stage2=Stage.Stage2("lion",100)
     stage2.performingOnStage()
-
-
-
 }
 //3. **Wildlife Preservation:** You're a wildlife conservationist working on a
 //program to track different species in a national park. Each species has its own
@@ -56,14 +53,12 @@ class Artist(var name:String,var country:String,var musicalStyle:String,var inst
         return "$name $country $musicalStyle $instruments"
 
     }
-
 }
 open class Performance(var performingArtist:String,var startTime:String,var endTime:String){
     open fun perform():String{
         return "on the music performance we will have $performingArtist first and her performance will start at $startTime and end at $endTime"
 
     }
-
   class MusicPerformance(performingArtist: String,startTime: String,endTime: String):Performance(performingArtist, startTime, endTime){
       override fun perform(): String {
           return super.perform()
@@ -78,19 +73,7 @@ open class Performance(var performingArtist:String,var startTime:String,var endT
 }
 
 open class Stage(var name: String,var capacity:Int){
-//    fun arrangeStage(){
-//        val arrangement= mutableListOf<Map<String,Any>>()
-//        val list= mutableMapOf<String,Any>()
-//        list["artist1"]="don williams"
-//        list["artist2"]="bill Gaither"
-//        list["artist3"]="jabidii"
-//        list["artist4"]="ken rodgers"
-//        arrangement.add(list)
-//        println(arrangement)
-//
-//
-//
-//    }
+
     class MainStage(name: String,capacity: Int):Stage(name, capacity){
         fun performingOnStage(){
             val arrangement1= mutableListOf<Map<String,Any>>()
@@ -101,8 +84,6 @@ open class Stage(var name: String,var capacity:Int){
             list["artist4"]="ken rodgers"
             arrangement1.add(list)
             println(arrangement1)
-
-
 
         }
     }
@@ -116,9 +97,6 @@ open class Stage(var name: String,var capacity:Int){
             list["artist4"]="ken rodgers"
             arrangement2.add(list)
             println(arrangement2)
-
-
-
         }
 
     }
